@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        padding: 2rem;
+        background-color: rgb(130, 173, 223);
+    }
+    
+    #container {
+        max-height: 200px;
+        max-width: 200px;
+    }
+    
+    #container .btmtxt,
+    .toptxt {
+        background-size: cover;
+        background-color: rgb(31, 128, 158);
+        font: bold;
+        font-size: 30px;
+        left: 50px;
+        object-fit: contain;
+        z-index: 100;
+        display: inline-block;
+        position: absolute;
+    }
+    
+    #Meme {
+        border-collapse: collapse;
+    }
+    
+    #Meme img {
+        height: 300px;
+        width: 300px;
+        opacity: .75;
+        z-index: -1;
+        position: relative;
+    }
+    
+    #Meme .btmtxt {
+        margin-top: 250px;
+        float: left;
+        position: absolute;
+    }
+    
+    #Meme .toptxt {
+        float: inline-start;
+    }
+    
+    #deleter {
+        font: RED;
+        color: black;
+        float: top;
+        position: absolute;
+    }
+    
+    #memeimg {
+        text-align: center;
+        padding: 25px;
+        background-color: rgb(167, 126, 51);
+    }
+</style>
+
+<body>
+    <h1>make many meme</h1>
+
+    <form id="memeimg">
+        <input type="text" id="imginput">
+        <input type="text" id="toptext">
+        <input type="text" id="btmtext">
+        <input type="submit" value="enter" class="button">
+    </form>
+    <h2> your meme here</h2>
+    <div id="container">
+        <form id="Meme">
+            <span class="toptxt" id="fintoptext"> </span>
+            <span class="btmtxt" id="finbtmtext"></span>
+            <p id="deleter" source="" alt="input needed"></p>
+        </form>
+    </div>
+</body>
+<script src="memegen.js"></script>
+
+</html>
