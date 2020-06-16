@@ -1,85 +1,78 @@
 document.addEventListener("DOMContentLoaded", function() {
-        var input = document.getElementById("imginput");
-        var finalmeme = document.getElementById("finalmeme");
-        var topText = document.getElementById("toptext");
-        var btmText = document.getElementById("btmtext");
-        var fintoptext = document.getElementById("fintoptext");
-        var finbtmtext = document.getElementById("finbtmtext");
-        var container = document.getElementById("container");
-        submit();
+    var input = document.getElementById("imginput");
+    var memeimage = document.getElementById("memeimg")
+    var meme = document.getElementById("Meme")
+    var finalmeme = document.getElementById("finalmeme");
+    var topText = document.getElementById("toptext");
+    var btmText = document.getElementById("btmtext");
+    var container = document.getElementById("container");
 
-        function submit() {
-            document.getElementById("memeimg").addEventListener("submit", function(e) {
-                e.preventDefault();
-                memeImage();
+    submit();
+
+    function submit() {
+        let count = 0;
+        memeimage.addEventListener("submit", function(e) {
+            e.preventDefault()
+            createCanvas();
+            count++;
+            console.log(count);
+            //if (count > 1) {
+            // var meme2 = document.createElement("tr")
+            // var canvas2 = document.createElement("canvas")
+            // container.append("meme2")
+            // meme2.append("canvas2")
+
+            // }
+        })
+
+        function createCanvas() {
+            var canvas = document.createElement('canvas')
+            var ctx = canvas.getContext("2d")
+            var placement = document.createElement("td")
+            placement.id = "placement"
+            var image = document.createElement("img");
+            canvas.id = "canvas";
+            image.height = canvas.height
+            image.width = canvas.width
+                // canvas.style.height = "400"
+                // canvas.style.width = "400"
+            image.class = "image";
+            //image.id = "image";
+            image.src = input.value;
+            container.append(placement);
+            placement.append(canvas);
+            image.addEventListener("load", function() {
+                ctx.drawImage(image, 0, 0, image.width, image.height)
+
+                ctx.fillText(topText.value, 40, 50)
+                ctx.fillText(btmText.value, 40, 150)
             })
+            ctx.font = "30px serif"
+            ctx.fillStyle = "White"
+            ctx.textAlign = "centered";
+            // Buttons();
+
+            // function Buttons() {
+            //     let anchor = document.createElement("a")
+            //     canvas.prepend(anchor)
+            //     anchor.id = "anchor"
+            //     anchor.href = 'meme.png'
+            //     anchor.download = canvas;
+            //     anchor.addEventListener("click", function(e) {
+            //         let urlmeme = canvas.toDataURL("image/png")
+            //         localStorage.set("canvas", urlmeme);
+            //     })
+            const button = document.createElement("button");
+            button.id = "button"
+            button.innerText = "X"
+            placement.append(button)
+            button.addEventListener("click", function(e) {
+                canvas.parentNode.removeChild(canvas);
+                button.style.display = "none"
+            })
+
         }
 
-        function memeImage() {
-            var finalmeme = document.createElement("img");
-            finalmeme.id = "finalMeme";
-            //finalmeme.className = "newImage"
-            fintoptext.innerText = topText.value;
-            finbtmtext.innerText = btmText.value;
-            finalmeme.src = input.value;
-            document.getElementById("Meme").append(finalmeme);
-            deleteButton();
+    }
 
-            function deleteButton() {
-                const deleter = document.getElementById("deleter")
-                const button = document.createElement("button");
-                button.classList = "deletbtn";
-                button.innerText = "X";
-                deleter.append(button);
-                finalmeme.addEventListener("click", function(event) {
-                    event.target.style.display = "none";
-                })
-            }
-        }
-
-    })
-    //var memeimg = document.getElementById("imginput").value;
-    // function canvasImg() {
-    //     container.addEventListener("load", function(event) {
-    //         let newMeme = document.getElementById("Meme");
-    //         memeContext = newMeme.getContext("2d");
-    //         newMeme.width = memeimg.width;
-    //         newMeme.height = memeimg.height;
-    //         memeContext.fillText(fintoptext);
-    //         memeContext.fillText(finbtmtext);
-    //         memeContext.drawImage(memeimg, 0, 0, newMeme.width, newMeme.height);
-    //         var memeUrl = newMeme.toDataURL("image/png");
-    //         try {
-    //             localStorage.setItem("memeContext", memeUrl);
-    //         } catch (event) {
-    //             console.log("Storage failed: " + event);
-    //         }
-    //     }, false);
-
-
-
-
-
-
-
-
-
-
-// 
-
-
-
-//create location fo rmeme
-//place link for meme
-//function newText() {
-//     const newToptxt = document.createElement("p");
-//     const newBtmtxt = document.createElement("p");
-//     newToptxt.append(fintoptext);
-//     newBtmtxt.append(finbtmtext);
-//     newToptxt.className = "p1";
-//     newBtmtxt.className = "p2";
-//     newToptxt.innerText = topText.value;
-//     newBtmtxt.innerText = btmText.value;
-
-// }
-// }
+})

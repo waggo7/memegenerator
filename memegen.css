@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(111, 185, 235);
+    background-position: center;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-decoration: double;
+    padding: 2rem;
+    background-color: rgb(130, 173, 223);
+}
+
+h2 {
+    background-position: center;
+    align-items: flex-start;
+    float: left;
+    background-color: rgb(163, 146, 111);
+}
+
+input {
+    float: left;
+    width: fit-content;
+}
+
+#preenter {
+    text-decoration: double;
+    font-weight: bolder;
+    font-size: 11px;
+}
+
+label {
+    float: right;
+    font-weight: 700;
+    font-size: 17px;
+    width: 100%;
+    /* padding-right: 24px; */
+    text-align: left;
+}
+
+#into {
+    border-collapse: collapse;
+    padding-top: 5em;
+}
+
+#canvas {
+    height: 400px;
+    width: 400px;
+}
+
+#canvas .image {
+    z-index: -1;
+}
+
+#h2 {}
+
+
+/* 
+#canvas text {
+    text-transform: capitalize;
+    z-index: 100;
+    font-size: 100px;
+} */
+
+#button {
+    float: top;
+}
+
+#intro {
+    font-weight: 800;
+    font-size: 17px;
+}
+
+li {
+    color: rgb(138, 9, 9);
+    font-size: 15px;
+}
+
+
+/* .image {
+    height: 400px;
+    width: 400px;
+} */
