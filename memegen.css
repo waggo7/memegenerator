@@ -1,84 +1,123 @@
 body {
     background-color: rgb(111, 185, 235);
-    background-position: center;
+    display: flexbox;
+}
+
+.container {
+    justify-content: center;
+    text-align: center;
 }
 
 h1 {
+    text-decoration-style: dashed;
+    text-shadow: rgb(138, 25, 25);
+    border-color: darkred;
+    border: double;
+    border-color: gray;
+    justify-content: center;
+    text-align: center;
     font-size: 35px;
     font-family: sans-serif;
     text-transform: uppercase;
-    text-decoration: double;
     padding: 2rem;
-    background-color: rgb(130, 173, 223);
 }
 
-h2 {
-    background-position: center;
-    align-items: flex-start;
-    float: left;
-    background-color: rgb(163, 146, 111);
+#headerp {
+    font-size: 30px;
 }
 
-input {
-    float: left;
-    width: fit-content;
+#container {
+    height: 5em;
+    width: 5em;
+    object-fit: contain;
 }
 
-#preenter {
-    text-decoration: double;
-    font-weight: bolder;
-    font-size: 11px;
-}
-
-label {
-    float: right;
-    font-weight: 700;
-    font-size: 17px;
-    width: 100%;
-    /* padding-right: 24px; */
-    text-align: left;
-}
-
-#into {
-    border-collapse: collapse;
-    padding-top: 5em;
-}
-
-#canvas {
-    height: 400px;
-    width: 400px;
-}
-
-#canvas .image {
-    z-index: -1;
-}
-
-#h2 {}
-
-
-/* 
-#canvas text {
-    text-transform: capitalize;
+.memes:hover {
     z-index: 100;
-    font-size: 100px;
-} */
+    /* position: absolute; */
+    zoom: 8.5;
+}
 
-#button {
-    float: top;
+#table {
+    border-spacing: 11px;
+}
+
+.memes {
+    position: absolute;
+    height: 30px;
+    width: 30px;
 }
 
 #intro {
-    font-weight: 800;
-    font-size: 17px;
+    font-size: 22px;
 }
 
-li {
-    color: rgb(138, 9, 9);
-    font-size: 15px;
+ol {
+    border-collapse: collapse;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin: 1px;
+    display: inline-flexbox;
+    width: 800px;
 }
 
+#list li {
+    font-weight: 550;
+    font-size: 20px;
+    font-family: sans-serif;
+    transform: translateX(6px);
+    width: 800px;
+    padding: 12px;
+}
 
-/* .image {
-    height: 400px;
-    width: 400px;
-} */
+.subtext {
+    padding: 9px;
+    width: 200em;
+    font: 8px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#memeimg {
+    width: 150%;
+    padding: 17px;
+    /* justify-content: center; */
+    background-color: rgb(163, 146, 111);
+}
+
+#memeimg input {
+    margin: 14px;
+    justify-content: center;
+    height: 24px;
+    width: 18em;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#canvas {
+    object-fit: contain;
+    height: auto;
+    width: auto;
+    max-height: 500px;
+    max-width: 500px;
+}
+
+#h3text {
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 650;
+    font-size: 32px;
+}
+
+#divh3,
+a,
+#faq {
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 450;
+    font-size: 19px;
+}

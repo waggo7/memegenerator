@@ -5,45 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" type="text/css" href="memegen.css">
+    <link href="https://fonts.googleapis.com/css?family=Diplomata:regular" rel="stylesheet" />
 </head>
 <style>
 
 </style>
 
 <body>
-    <h1>meant to make many memes</h1>
-    <h2 id="h2">
+    <div class="container">
+        <h1>meant to make many, Majestic, memes</h1>
+        <p id="headerp">Think you have what it takes to make legends like these?... hint mouse</p>
 
-        <form id="memeimg">
-            <label> paste link here for Meme background</label>
-            <input type="url" id="imginput">
-            <label>Text at top of image</label>
-            <input type="text" id="toptext">
-            <label>Text at the bottom... duh</label>
-            <input type="text" id="btmtext">
-            <label id="preenter">when all is ready just hit ENTER</label>
-            <input type="submit" value="enter" class="button">
-        </form>
-    </h2>
+    </div>
+    <table id="table">
+        <tbody class="memecontainer">
+            <td>
+                <img src="meme2.jpg" alt="meme" class="memes">
+            </td>
+            <td>
+                <img src="meme3.jpg" class="memes">
 
-    <h3>
+            </td>
+            <td>
+                <img src="meme4.jpg" class="memes">
+            </td>
+            <td>
+                <img src="meme5.jpg" class="memes">
+            </td>
+            <td>
+                <img src="meme6.jpg" class="memes">
+            </td>
+            <td>
+                <img src="meme6.jpg" class="memes">
+            </td>
+            <td>
+                <img src="meme7.jpg" class="memes">
+            </td>
+
+        </tbody>
+    </table>
+    <div class="container">
+
         <form id="intro">HERE WE HAVE AN EASY WAY TO MAKE HILAROUS MEMES
-            <ol id="list">
-                <li>First find the image you want to use</li>
-                <li>Next, enter the link for the image in the box marked "meme background" </li>
-                <li>Next, enter the text you want at the top of the image</li>
-                <li>Finally enter the text you want at the bottom of the image</li>
+    </div>
+    <ol id="list">
+        <li>First find the image you want to use as the background</li>
+        <ul class="subtext"> -when selecting image from google select "copy image address"
 
-            </oL>
-        </form>
-    </h3>
-    <h4> your meme here </h4>
-    <table id="container">
+        </ul>
+        <li>Next, enter the link for the image in the box marked "meme background " </li>
+        <li>Next, enter in bar with the label "text at the top"</li>
+        <li>Finally enter in the final bar label "text at the bottom</li>
+    </oL>
+    </form>
+    </div>
+    <form id="memeimg">
+        <input type="url" placeholder="copy image address" id="imginput" name="imageinput">
+        <input type="text" id="toptext" placeholder="text at the top" name="toptext">
+        <input type="text" id="btmtext" name="btmtext" placeholder="bottom text">
+        <br>
+        <button class="w3-button w3-hover-red" type="submit" name="button" id="submitbtn">submit this meme
+            </button>
+        </div>
+    </form>
+    <h2> your meme here </h2>
+    <table id="table">
+        <th id="container">
 
+        </th>
     </table>
 
+    <h3 id="h3text">Having issues? </h3>
+    <div id="divh3">
+        <ul id="faq">common issues</ul>
+        <li>
+            If the image link does seem to work checkout this <a href="https://imgflip.com/memetemplates" id="memetemplates">site</a> for popular meme backgrounds easy to copy</li>
+        <br>
+        <li>need <a href="https://digg.com/2020/best-memes-legs-did-it-work"> inspiration</a>?</li>
+
+    </div>
+
 </body>
-<script src="memegen.js"></script>
+<script src="memegen.js "></script>
 
 </html>
